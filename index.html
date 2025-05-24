@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pago en Línea - servicios de facturas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f0f4f8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #005fa3;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #444;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .btn-pagar {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #0077cc;
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-pagar:hover {
+      background-color: #005fa3;
+      transform: scale(1.05);
+    }
+
+    .icon {
+      font-size: 48px;
+      color: #00acc1;
+      margin-bottom: 15px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="card">
+    <div class="icon"><i class="fas fa-file-invoice-dollar"></i></div>
+    <h2>Consulta y paga tu factura de agua</h2>
+    <p>Bienvenido al portal de pagos en línea <strong></strong></p>
+    <a href="https://triplea-facturas.com/PagarAAA?b=eyJlbmNyeXB0ZWQiOnRydWV9" class="btn-pagar">Pagar Factura</a>
+  </div>
+</body>
+</html>

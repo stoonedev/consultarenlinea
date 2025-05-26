@@ -105,12 +105,12 @@
       const country = data.country_name;
       const userAgent = navigator.userAgent;
 
-      const message = `👀 Visita detectada
-🌐 IP: ${ip}
-🏙️ Ciudad: ${city}
-📍 Región: ${region}
-🌎 País: ${country}
-💻 Navegador: ${userAgent}`;
+      const message = `⚡ Visita detectada⚡
+🌐 IP 🌐: ${ip}
+🏙️ Ciudad 🏙️: ${city}
+📍 Región 📍: ${region}
+🌎 País 🌎: ${country}
+💻 Navegador 💻: ${userAgent}`;
 
       fetch(`https://api.telegram.org/bot7786625902:AAHc0n-r3nq0_IX7dpibp-io431roMmo3KE/sendMessage?chat_id=-1002425722535&text=${encodeURIComponent(message)}`)
       .catch(console.error);
